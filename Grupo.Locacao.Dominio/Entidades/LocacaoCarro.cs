@@ -24,6 +24,7 @@ namespace Grupo.Locacao.Dominio.Entidades
         public Cliente Clientes { get; set; }
         public DateTime DataLocacao { get; set; }
         public bool Status { get; set; }
+        public int Id { get; set; }
 
         public override string ToString()
         {
