@@ -27,7 +27,7 @@ namespace Grupo.Locacao.Dominio.Entidades
 
         public override string ToString()
         {
-            return string.Format("{0} | {1} | {2} | {3}", Clientes, Carros, DataLocacao, Status== true ? "Ocupado": "Disponivel");
+            return string.Format("{0} | {1} | {2} | {3}", Clientes, Carros, DataLocacao.ToString("dd/MM/yyyy"), Status== true ? "Ocupado": "Disponivel");
         }
     }
 }
