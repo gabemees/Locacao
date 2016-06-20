@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Grupo.Locacao.Apresentacao</RootNamespace>
     <AssemblyName>Grupo.Locacao.Apresentacao</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,6 +53,11 @@
     <Compile Include="Controls\Cadastro\LocacaoDialog.Designer.cs">
       <DependentUpon>LocacaoDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="LocacaoCarroDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocacaoCarroDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="LocacaoCarroDBDataSet.xsc">
+      <DependentUpon>LocacaoCarroDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LocacaoCarroDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LocacaoCarroDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LocacaoCarroDBDataSet.xss">
+      <DependentUpon>LocacaoCarroDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -100,6 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\write.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Grupo.Locacao.Dominio\Grupo.Locacao.Dominio.csproj">
+      <Project>{c79ad08c-2afa-408c-9677-c14564e7cbfe}</Project>
+      <Name>Grupo.Locacao.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

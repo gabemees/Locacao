@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Grupo.Locacao.Apresentacao.Controls.Cadastro;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,19 @@ namespace Grupo.Locacao.Apresentacao
         public Principal()
         {
             InitializeComponent();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'locacaoCarroDBDataSet.LocacaoCarroes' table. You can move, or remove it, as needed.
+            this.locacaoCarroesTableAdapter.Fill(this.locacaoCarroDBDataSet.LocacaoCarroes);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LocacaoDialog locacaoDialog = new LocacaoDialog();
+            locacaoDialog.Show();
         }
     }
 }

@@ -28,73 +28,167 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip1.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.locacaoCarroDBDataSet = new Grupo.Locacao.Apresentacao.LocacaoCarroDBDataSet();
+            this.locacaoCarroesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.locacaoCarroesTableAdapter = new Grupo.Locacao.Apresentacao.LocacaoCarroDBDataSetTableAdapters.LocacaoCarroesTableAdapter();
+            this.tableAdapterManager = new Grupo.Locacao.Apresentacao.LocacaoCarroDBDataSetTableAdapters.TableAdapterManager();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carrosMarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carrosNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carrosPlacaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientesCpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientesNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientesTelefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataLocacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // toolStrip1
+            // dataGridView1
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(528, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.carrosMarcaDataGridViewTextBoxColumn,
+            this.carrosNomeDataGridViewTextBoxColumn,
+            this.carrosPlacaDataGridViewTextBoxColumn,
+            this.clientesCpfDataGridViewTextBoxColumn,
+            this.clientesNomeDataGridViewTextBoxColumn,
+            this.clientesTelefoneDataGridViewTextBoxColumn,
+            this.dataLocacaoDataGridViewTextBoxColumn,
+            this.statusDataGridViewCheckBoxColumn});
+            this.dataGridView1.DataSource = this.locacaoCarroesBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(1, 45);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(942, 407);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // toolStripButton1
+            // locacaoCarroDBDataSet
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::Grupo.Locacao.Apresentacao.Properties.Resources.mais;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.locacaoCarroDBDataSet.DataSetName = "LocacaoCarroDBDataSet";
+            this.locacaoCarroDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // toolStripButton2
+            // locacaoCarroesBindingSource
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::Grupo.Locacao.Apresentacao.Properties.Resources.edit;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.locacaoCarroesBindingSource.DataMember = "LocacaoCarroes";
+            this.locacaoCarroesBindingSource.DataSource = this.locacaoCarroDBDataSet;
             // 
-            // toolStripButton3
+            // locacaoCarroesTableAdapter
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::Grupo.Locacao.Apresentacao.Properties.Resources.trash_can;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.locacaoCarroesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.@__MigrationHistoryTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.LocacaoCarroesTableAdapter = this.locacaoCarroesTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Grupo.Locacao.Apresentacao.LocacaoCarroDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // carrosMarcaDataGridViewTextBoxColumn
+            // 
+            this.carrosMarcaDataGridViewTextBoxColumn.DataPropertyName = "Carros_Marca";
+            this.carrosMarcaDataGridViewTextBoxColumn.HeaderText = "Carros_Marca";
+            this.carrosMarcaDataGridViewTextBoxColumn.Name = "carrosMarcaDataGridViewTextBoxColumn";
+            // 
+            // carrosNomeDataGridViewTextBoxColumn
+            // 
+            this.carrosNomeDataGridViewTextBoxColumn.DataPropertyName = "Carros_Nome";
+            this.carrosNomeDataGridViewTextBoxColumn.HeaderText = "Carros_Nome";
+            this.carrosNomeDataGridViewTextBoxColumn.Name = "carrosNomeDataGridViewTextBoxColumn";
+            // 
+            // carrosPlacaDataGridViewTextBoxColumn
+            // 
+            this.carrosPlacaDataGridViewTextBoxColumn.DataPropertyName = "Carros_Placa";
+            this.carrosPlacaDataGridViewTextBoxColumn.HeaderText = "Carros_Placa";
+            this.carrosPlacaDataGridViewTextBoxColumn.Name = "carrosPlacaDataGridViewTextBoxColumn";
+            // 
+            // clientesCpfDataGridViewTextBoxColumn
+            // 
+            this.clientesCpfDataGridViewTextBoxColumn.DataPropertyName = "Clientes_Cpf";
+            this.clientesCpfDataGridViewTextBoxColumn.HeaderText = "Clientes_Cpf";
+            this.clientesCpfDataGridViewTextBoxColumn.Name = "clientesCpfDataGridViewTextBoxColumn";
+            // 
+            // clientesNomeDataGridViewTextBoxColumn
+            // 
+            this.clientesNomeDataGridViewTextBoxColumn.DataPropertyName = "Clientes_Nome";
+            this.clientesNomeDataGridViewTextBoxColumn.HeaderText = "Clientes_Nome";
+            this.clientesNomeDataGridViewTextBoxColumn.Name = "clientesNomeDataGridViewTextBoxColumn";
+            // 
+            // clientesTelefoneDataGridViewTextBoxColumn
+            // 
+            this.clientesTelefoneDataGridViewTextBoxColumn.DataPropertyName = "Clientes_Telefone";
+            this.clientesTelefoneDataGridViewTextBoxColumn.HeaderText = "Clientes_Telefone";
+            this.clientesTelefoneDataGridViewTextBoxColumn.Name = "clientesTelefoneDataGridViewTextBoxColumn";
+            // 
+            // dataLocacaoDataGridViewTextBoxColumn
+            // 
+            this.dataLocacaoDataGridViewTextBoxColumn.DataPropertyName = "DataLocacao";
+            this.dataLocacaoDataGridViewTextBoxColumn.HeaderText = "DataLocacao";
+            this.dataLocacaoDataGridViewTextBoxColumn.Name = "dataLocacaoDataGridViewTextBoxColumn";
+            // 
+            // statusDataGridViewCheckBoxColumn
+            // 
+            this.statusDataGridViewCheckBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewCheckBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewCheckBoxColumn.Name = "statusDataGridViewCheckBoxColumn";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(931, 45);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Adicionar\r\n";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 299);
-            this.Controls.Add(this.toolStrip1);
+            this.ClientSize = new System.Drawing.Size(932, 464);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "Principal";
             this.Text = "Form1";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.Principal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroesBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private LocacaoCarroDBDataSet locacaoCarroDBDataSet;
+        private System.Windows.Forms.BindingSource locacaoCarroesBindingSource;
+        private LocacaoCarroDBDataSetTableAdapters.LocacaoCarroesTableAdapter locacaoCarroesTableAdapter;
+        private LocacaoCarroDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carrosMarcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carrosNomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carrosPlacaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clientesCpfDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clientesNomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clientesTelefoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataLocacaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn statusDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }
 

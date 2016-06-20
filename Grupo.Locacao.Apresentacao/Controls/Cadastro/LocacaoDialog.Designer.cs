@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbData = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +47,11 @@
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.locacaoCarroDBDataSet = new Grupo.Locacao.Apresentacao.LocacaoCarroDBDataSet();
+            this.locacaoCarroesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.locacaoCarroesTableAdapter = new Grupo.Locacao.Apresentacao.LocacaoCarroDBDataSetTableAdapters.LocacaoCarroesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,6 +91,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.locacaoCarroesBindingSource, "Clientes_Nome", true));
             this.txtNome.Location = new System.Drawing.Point(59, 60);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(464, 20);
@@ -192,6 +199,7 @@
             this.btnOk.TabIndex = 16;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnCancelar
             // 
@@ -202,6 +210,20 @@
             this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // locacaoCarroDBDataSet
+            // 
+            this.locacaoCarroDBDataSet.DataSetName = "LocacaoCarroDBDataSet";
+            this.locacaoCarroDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // locacaoCarroesBindingSource
+            // 
+            this.locacaoCarroesBindingSource.DataMember = "LocacaoCarroes";
+            this.locacaoCarroesBindingSource.DataSource = this.locacaoCarroDBDataSet;
+            // 
+            // locacaoCarroesTableAdapter
+            // 
+            this.locacaoCarroesTableAdapter.ClearBeforeFill = true;
             // 
             // LocacaoDialog
             // 
@@ -228,6 +250,9 @@
             this.Controls.Add(this.label1);
             this.Name = "LocacaoDialog";
             this.Text = "LocacaoDialog";
+            this.Load += new System.EventHandler(this.LocacaoDialog_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +278,8 @@
         private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancelar;
+        private LocacaoCarroDBDataSet locacaoCarroDBDataSet;
+        private System.Windows.Forms.BindingSource locacaoCarroesBindingSource;
+        private LocacaoCarroDBDataSetTableAdapters.LocacaoCarroesTableAdapter locacaoCarroesTableAdapter;
     }
 }
