@@ -10,7 +10,8 @@ namespace Grupo.Locacao.Infra.Dados.Contexto
 
         }
 
-        public object Cervejas { get; internal set; }
+        public Carro Carro { get;  set; }
+        public Cliente Cliente { get;  set; }
         public DbSet<LocacaoCarro> Locacoes { get; set; }
     }
 }

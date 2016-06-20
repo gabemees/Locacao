@@ -16,19 +16,21 @@ namespace Grupo.Locacao.Dominio.Entidades
         {
             DataLocacao = data;
             Status = status;
-            Clientes = cliente;
-            Carros = carro;
+            Cliente = cliente;
+            Carro = carro;
         }
 
-        public Carro Carros { get; set; }
-        public Cliente Clientes { get; set; }
+        public virtual Carro Carro { get; set; }
+        public int CarroId { get; set; }
+        public virtual Cliente Cliente { get; set; }
+        public int ClienteId { get; set; }
         public DateTime DataLocacao { get; set; }
         public bool Status { get; set; }
         public int Id { get; set; }
 
         public override string ToString()
         {
-            return string.Format("{0} | {1} | {2} - {3}", Clientes, Carros, DataLocacao.ToString("dd/MM/yyyy"), Status== true ? "Ocupado": "Disponivel");
+            return string.Format("{0} | {1} | {2} - {3}", Cliente, Carro, DataLocacao.ToString("dd/MM/yyyy"), Status== true ? "Ocupado": "Disponivel");
         }
     }
 }

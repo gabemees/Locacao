@@ -45,20 +45,19 @@ namespace Grupo.Locacao.Infraestrutura
         [TestMethod]
         public void AtualizarLocacaoNoBancoTeste()
         {
-            LocacaoCarro locacao = _contexto.Locacoes.Find(2);
+            LocacaoCarro locacao = _contexto.Locacoes.Find(1);
 
-            locacao.Clientes.Nome = "Richard";
-            locacao.Clientes.Cpf = "01247541983";
-            locacao.Clientes.Telefone = "99557080";
+            locacao.DataLocacao = DateTime.Now;
+            locacao.Status = true;
+            
 
 
             _repositorio.Atualizar(locacao);
 
-            LocacaoCarro locacaoAtualizada = _contexto.Locacoes.Find(2);
-            Assert.AreEqual("Richard", locacaoAtualizada.Clientes.Nome);
-            Assert.AreEqual("01247541983", locacaoAtualizada.Clientes.Cpf);
-            Assert.AreEqual("99557080", locacaoAtualizada.Clientes.Telefone);
-        }
+            LocacaoCarro locacaoAtualizada = _contexto.Locacoes.Find(1);
+            Assert.AreEqual(DateTime.Now, locacao.DataLocacao);
+            Assert.AreEqual(true, locacao.Status);
+                    }
 
         [TestMethod]
         public void RetornarLocacaoNoBancoTeste()
