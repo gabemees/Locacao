@@ -34,6 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.locacaoCarroesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.locacaoCarroDBDataSet = new Grupo.Locacao.Apresentacao.LocacaoCarroDBDataSet();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,11 +49,9 @@
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.locacaoCarroDBDataSet = new Grupo.Locacao.Apresentacao.LocacaoCarroDBDataSet();
-            this.locacaoCarroesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.locacaoCarroesTableAdapter = new Grupo.Locacao.Apresentacao.LocacaoCarroDBDataSetTableAdapters.LocacaoCarroesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -96,6 +96,16 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(464, 20);
             this.txtNome.TabIndex = 4;
+            // 
+            // locacaoCarroesBindingSource
+            // 
+            this.locacaoCarroesBindingSource.DataMember = "LocacaoCarroes";
+            this.locacaoCarroesBindingSource.DataSource = this.locacaoCarroDBDataSet;
+            // 
+            // locacaoCarroDBDataSet
+            // 
+            this.locacaoCarroDBDataSet.DataSetName = "LocacaoCarroDBDataSet";
+            this.locacaoCarroDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
@@ -211,16 +221,6 @@
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // locacaoCarroDBDataSet
-            // 
-            this.locacaoCarroDBDataSet.DataSetName = "LocacaoCarroDBDataSet";
-            this.locacaoCarroDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // locacaoCarroesBindingSource
-            // 
-            this.locacaoCarroesBindingSource.DataMember = "LocacaoCarroes";
-            this.locacaoCarroesBindingSource.DataSource = this.locacaoCarroDBDataSet;
-            // 
             // locacaoCarroesTableAdapter
             // 
             this.locacaoCarroesTableAdapter.ClearBeforeFill = true;
@@ -251,8 +251,8 @@
             this.Name = "LocacaoDialog";
             this.Text = "LocacaoDialog";
             this.Load += new System.EventHandler(this.LocacaoDialog_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locacaoCarroDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
