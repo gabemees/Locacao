@@ -1,4 +1,4 @@
-﻿using Grupo.Locacao.Apresentacao.Controls.Cadastro;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,10 +25,30 @@ namespace Grupo.Locacao.Apresentacao
 
         }
 
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.locacaoCarroesBindingSource.EndEdit();
+            this.locacaoCarroesTableAdapter.Update(locacaoCarroDBDataSet.LocacaoCarroes);
+            this.Close();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            LocacaoDialog locacaoDialog = new LocacaoDialog();
-            locacaoDialog.Show();
+            this.locacaoCarroesBindingSource.AddNew();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.locacaoCarroesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.locacaoCarroDBDataSet);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.locacaoCarroesBindingSource.RemoveCurrent();
         }
     }
 }

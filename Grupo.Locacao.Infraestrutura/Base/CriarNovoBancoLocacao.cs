@@ -17,7 +17,7 @@ namespace Grupo.Locacao.Infraestrutura.Base
             {
 
                 LocacaoCarro locacoes = new LocacaoCarro(new DateTime(2016, 06, 13-i), true,
-                                                    new Cliente("Richard", "10672228980", "99188736"),
+                                                    new Cliente("Lucas", "10672228980", "99188736"),
                                                     new Carro("Gol", "VW", "MGT-8899"));
 
                 contexto.Locacoes.Add(locacoes);
